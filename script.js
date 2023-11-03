@@ -18,7 +18,9 @@ function gameFunction(e) {
     vez++;
   }
   if (vez > 5) {
-    if (
+    if (vez > 9) {
+      verifyVictory();
+    } else if (
       pos[0].innerText == pos[1].innerText &&
       pos[1].innerText == pos[2].innerText &&
       pos[0].innerText != ""
@@ -70,10 +72,12 @@ function gameFunction(e) {
   }
 }
 function verifyVictory() {
-  if (vez % 2 != 0) {
-    turnTxt.innerText = "O venceu";
+  if (vez > 9) {
+    turnTxt.innerText = "Deu velha!";
   } else if (vez % 2 == 0) {
     turnTxt.innerText = "X venceu";
+  } else if (vez % 2 != 0) {
+    turnTxt.innerText = "O venceu";
   }
   criarBotao();
   cover.classList.add("active");
@@ -94,6 +98,7 @@ function apagarBotao(e) {
   pos.forEach((element) => {
     element.innerText = "";
   });
+  turnTxt.innerText = "É a vez do X";
   position.removeChild(e.target);
   cover.classList.remove("active");
 }

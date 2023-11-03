@@ -48,12 +48,13 @@
   background-color: antiquewhite;
 }
 .opc {
+  padding: 1rem;
   text-justify: center;
   text-align: center;
   width: 150px;
   height: 150px;
   border: 1px solid black;
-  font-size: 8rem;
+  font-size: 6rem;
 }
 .opc:hover {
   cursor: pointer;
