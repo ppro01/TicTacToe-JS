@@ -91,7 +91,7 @@
     z-index: 99;
     opacity: 10%;
     background-color: black;
-    display: flex;
+    display: none;
   }
   .active {
     display: flex;
