@@ -89,7 +89,7 @@ function criarBotao() {
 }
 
 function apagarBotao(e) {
-  vez = 0;
+  vez = 1;
   var pos = document.querySelectorAll(".opc");
   pos.forEach((element) => {
     element.innerText = "";
